@@ -1,6 +1,5 @@
 
 classes = cell(4,2);
-%classes = ['econ201', 'Lecture'; 'cs432', 'Lecture';  'cs283', 'Lecture';   'chem102', 'Lab'];
 classes{1,1} = 'econ201';
 classes{1,2} = 'Lecture';
 
@@ -14,4 +13,9 @@ classes{4,1} = 'chem102';
 classes{4,2} = 'Lecture';
 
 
-all = DownloadClasses(classes)
+all_classes = DownloadClasses(classes);
+
+schedules = cell(100,1);
+for i=1:100
+    schedules{i} = GenerateSchedule(all_classes);
+end

@@ -8,7 +8,7 @@ term_year = '15-16';
 url = 'http://107.170.133.244/api/v1/search_webtms';
 options = weboptions('MediaType','application/json');
 
-all_classes = cell(size(classes));
+all_classes = cell(size(classes,1));
 
 for i= 1:size(classes)
     data = struct();
