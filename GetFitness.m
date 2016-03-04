@@ -38,6 +38,7 @@ function fitness = GetFitness( classes, preferences )
     fitness = 0;
     
     fitness = fitness + (preferences.online_classes * online_classes);
+    fitness = fitness + ((10-preferences.online_classes) * (size(classes,1) - online_classes))/2;
     
     for i = 1:size(mapkeys,2)
         times = mapObj(char(mapkeys(i)));
@@ -50,7 +51,7 @@ function fitness = GetFitness( classes, preferences )
     for i = 1:size(preferences.no_classes)
         time = mapObj(char(preferences.no_classes(i)));
         if time(3) == 0
-            fitness = fitness + 5;
+            fitness = fitness + 10;
         end    
     end    
     
