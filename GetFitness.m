@@ -45,6 +45,8 @@ function fitness = GetFitness( classes, preferences )
         if times(3) ~= 0
             fitness = fitness + ((14-((times(2) - times(1))/100)) * preferences.tightly_packed)/10;
             fitness = fitness + ((14-((times(1)-800)/100)) * preferences.morning_classes)/10;
+            fitness = fitness + (((times(1)-800)/100) * (10-preferences.morning_classes))/10;
+
         end    
     end 
     
