@@ -1,13 +1,18 @@
+% CS385 - Final Project
+% David Monteleone, Tomer Shemesh, Kelly Shiptoski
+
+% Returns the fitness value for a set of classes
 function fitness = GetFitness( classes, preferences )
-%GETFITNESS Summary of this function goes here
-%   Detailed explanation goes here
+    % Setting up objects/structs to store information needed to score based
+    % on user preference
     online_classes = 0;
     mapObj = containers.Map();
     mapkeys = ['M','T','W','R','F','S'];
     for i = 1:size(mapkeys,2)
         mapObj(char(mapkeys(i))) = [10000,0,0];
     end    
-      
+    
+    % Obtaining information from schedule and mapping for scoring use
     for i=1:size(classes,1)
        class_str = strsplit(classes{i}.days_time_string,' ');
        if strcmp(char(class_str(1)),char('TBD'))
@@ -35,6 +40,7 @@ function fitness = GetFitness( classes, preferences )
        end    
     end    
     
+    % Get individual preferences scores and add to total points 'fitness'
     fitness = 0;
     
     fitness = fitness + (preferences.online_classes * online_classes);

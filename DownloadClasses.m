@@ -1,6 +1,9 @@
+% CS385 - Final Project
+% David Monteleone, Tomer Shemesh, Kelly Shiptoski
+
+% Downloads all desired classes from the WebTMS API
 function all_classes = DownloadClasses( classes )
-%DOWNLOADCLASSES Summary of this function goes here
-%   Detailed explanation goes here
+% Downloads all desired classes from the WebTMS API
 
 term = 'Winter';
 term_type = 'Quarter';

@@ -1,3 +1,6 @@
+% CS385 - Final Project
+% David Monteleone, Tomer Shemesh, Kelly Shiptoski
+
 function fits = Fits(schedule, class)
     fits = true;
     for k=1:size(schedule)

@@ -1,6 +1,9 @@
+% CS385 - Final Project
+% David Monteleone, Tomer Shemesh, Kelly Shiptoski
+
+% Checks classes for uniqueness
 function unique = IsUnique( fitness,classes )
-%ISUNIQUE Summary of this function goes here
-%   Detailed explanation goes here
+    % Checks classes for uniqueness
     unique = true;
     for i=1:size(classes,1)
         if isempty(classes{i,1})

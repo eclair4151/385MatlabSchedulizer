@@ -1,9 +1,11 @@
+% CS385 - Final Project
+% David Monteleone, Tomer Shemesh, Kelly Shiptoski
+
+% Generate a random schedule of desired classes
 function schedule = GenerateSchedule( all_classes )
-%GENERATESCHEDULE Summary of this function goes here
-%   Detailed explanation goes here
     schedule = cell(size(all_classes,1));
     i = 1;
-    
+    % Generate a random schedule of desired classes
     while i <= size(all_classes,1)
         nums = size(all_classes{i},1);
         order_to_try = randperm(nums);

@@ -1,3 +1,7 @@
+% CS385 - Final Project
+% David Monteleone, Tomer Shemesh, Kelly Shiptoski
+
+% This function places the schedule data into the GUI table
 function data = ShowFigure( classes, t )
 
 onlineIndex = 1;
@@ -5,6 +9,7 @@ keySet =   {'M', 'T', 'W', 'R','F','S'};
 valueSet = 1:6;
 mapObj = containers.Map(keySet,valueSet);
 data = cell(24,7);
+% Place each class in needed column and row
 for i=1:size(classes)
     if strcmp(classes{i}.instruction_method, 'Online')
         data{onlineIndex,7} = classes{i}.class_id;
@@ -32,10 +37,7 @@ for i=1:size(classes)
      
 end
 
+% Set data in table
 t.Data = data;
-%SHOWFIGURE Summary of this function goes here
-%   Detailed explanation goes here
-
-
 end
 
