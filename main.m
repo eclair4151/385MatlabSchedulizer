@@ -28,11 +28,12 @@ classes{7,2} = 'Recitation/Discussion';
 
 % Create our user defined preferences
 % These need to be integers between 0 and 10
+% 10 is favorable and 0 is not
 preferences = struct();
 preferences.online_classes = 10;
 preferences.tightly_packed = 10;
 preferences.morning_classes = 0;
-preferences.no_classes = ['W']; %#ok<NBRAK>
+preferences.no_classes = ['W'];
 
 % Get the classes from the API
 all_classes = DownloadClasses(classes);
