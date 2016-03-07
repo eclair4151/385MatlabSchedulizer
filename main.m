@@ -59,6 +59,7 @@ statArray = zeros(1,100);
 % Perform n number of generations
 for i=1:100
     % Sort population
+    % https://www.mathworks.com/matlabcentral/newsreader/view_thread/291703
     [x indexSorted] = sort([schedules{:,2}],'descend');
     schedules = schedules(indexSorted,:);
     fprintf('%i %f\n',i,schedules{1,2});
