@@ -30,10 +30,10 @@ classes{7,2} = 'Recitation/Discussion';
 % These need to be integers between 0 and 10
 % 10 is favorable and 0 is not
 preferences = struct();
-preferences.online_classes = 10;
-preferences.tightly_packed = 10;
-preferences.morning_classes = 0;
-preferences.no_classes = ['W'];
+preferences.online_classes = 5;
+preferences.tightly_packed = 5;
+preferences.morning_classes = 5;
+preferences.no_classes = ['F'];
 
 % Get the classes from the API
 all_classes = DownloadClasses(classes);
