@@ -1,6 +1,8 @@
 % CS385 - Final Project
 % David Monteleone, Tomer Shemesh, Kelly Shiptoski
 
+% Takes in 1 class and a list of classes and tells us whether that class
+% can fit into a schedule with the other classes
 function fits = Fits(schedule, class)
     fits = true;
     for k=1:size(schedule)
